@@ -18,16 +18,16 @@ export function TransactionHistory({ transactions }: { transactions: CreditLedge
       return <ArrowUpCircle className="w-5 h-5 text-green-600" />
     }
     if (reason.includes('refund')) {
-      return <RefreshCw className="w-5 h-5 text-blue-600" />
+      return <RefreshCw className="w-5 h-5 text-emerald-600" />
     }
     if (reason.includes('reserve')) {
-      return <ArrowDownCircle className="w-5 h-5 text-orange-600" />
+      return <ArrowDownCircle className="w-5 h-5 text-green-600" />
     }
     if (reason.includes('MVP')) {
-      return <Zap className="w-5 h-5 text-violet-600" />
+      return <Zap className="w-5 h-5 text-emerald-600" />
     }
     if (reason.includes('task') || reason.includes('Task')) {
-      return <User className="w-5 h-5 text-indigo-600" />
+      return <User className="w-5 h-5 text-emerald-600" />
     }
     return delta > 0 ? (
       <ArrowUpCircle className="w-5 h-5 text-green-600" />
@@ -45,13 +45,13 @@ export function TransactionHistory({ transactions }: { transactions: CreditLedge
       return 'bg-green-50'
     }
     if (reason.includes('refund')) {
-      return 'bg-blue-50'
+      return 'bg-emerald-50'
     }
     if (reason.includes('reserve')) {
-      return 'bg-orange-50'
+      return 'bg-emerald-50'
     }
     if (reason.includes('MVP')) {
-      return 'bg-violet-50'
+      return 'bg-emerald-50'
     }
     return 'bg-gray-50'
   }

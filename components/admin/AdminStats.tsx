@@ -11,9 +11,9 @@ export function AdminStats({ stats }: { stats: StatCard[] }) {
   const getColorClasses = (color: string) => {
     switch (color) {
       case 'violet':
-        return 'bg-violet-100 text-violet-600'
+        return 'bg-emerald-100 text-emerald-600'
       case 'blue':
-        return 'bg-blue-100 text-blue-600'
+        return 'bg-emerald-100 text-emerald-600'
       case 'indigo':
         return 'bg-indigo-100 text-indigo-600'
       case 'green':

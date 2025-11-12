@@ -126,7 +126,7 @@ export default function CookiesPage() {
                 You can manage your cookie preferences at any time through our Cookie Preference Center. Click the button below to adjust your settings:
               </p>
               <div className="bg-gray-100 rounded-lg p-6 mb-4">
-                <button className="bg-gradient-to-br from-sky-600 to-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+                <button type="button" className="bg-gradient-to-br from-emerald-600 to-green-700 text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
                   Manage Cookie Preferences
                 </button>
               </div>
@@ -165,7 +165,7 @@ export default function CookiesPage() {
                 If you have questions about our use of cookies, please contact us at:
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Email: privacy@nimbusdev.com
+                Email: support@velocitydev.com
               </p>
             </section>
           </div>

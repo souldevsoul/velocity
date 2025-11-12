@@ -163,8 +163,9 @@ export default function LoginPage() {
                 {!isSignUp && (
                   <div className="text-right mb-8">
                     <a
-                      className="inline-block text-sm font-semibold text-blue-600 hover:text-blue-700 focus:outline-none focus:underline"
+                      className="inline-block text-sm font-semibold text-emerald-600 hover:text-emerald-700 focus:outline-none focus:underline"
                       href="#"
+                      aria-label="Forgot Password"
                     >
                       Forgot Password?
                     </a>
@@ -203,11 +204,11 @@ export default function LoginPage() {
               {isSignUp && (
                 <p className="mt-6 text-xs text-center text-gray-700">
                   By signing up, you agree to our{' '}
-                  <Link href="/terms" className="text-blue-600 hover:text-blue-700 hover:underline font-medium">
+                  <Link href="/terms" className="text-emerald-600 hover:text-emerald-700 hover:underline font-medium">
                     Terms of Service
                   </Link>{' '}
                   and{' '}
-                  <Link href="/privacy" className="text-blue-600 hover:text-blue-700 hover:underline font-medium">
+                  <Link href="/privacy" className="text-emerald-600 hover:text-emerald-700 hover:underline font-medium">
                     Privacy Policy
                   </Link>
                 </p>
@@ -217,7 +218,7 @@ export default function LoginPage() {
             {isSignUp && (
               <div className="text-center">
                 <div className="inline-flex items-center px-6 py-3 bg-white/40 backdrop-blur-md border border-white/30 rounded-xl text-gray-900 text-sm font-medium">
-                  <svg className="w-4 h-4 mr-2 text-blue-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 mr-2 text-emerald-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   Get 100 free credits when you sign up

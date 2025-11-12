@@ -1,13 +1,10 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck -- TODO: fix this
-
 import { Application, Assets, Sprite, Texture } from "pixi.js";
 
 export const isDestroyed = (app: Application) => {
-  if (!app.ticker || !app.renderer || !app.stage || !app.renderer.gl)
+  if (!app.ticker || !app.renderer || !app.stage || !(app.renderer as any).gl)
     return true;
 
-  return app.renderer.gl.isContextLost();
+  return (app.renderer as any).gl.isContextLost();
 };
 
 export const generateTexture = (app: Application, graphic: any) => {

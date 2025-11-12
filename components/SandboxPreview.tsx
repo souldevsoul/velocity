@@ -43,7 +43,7 @@ export default function SandboxPreview({
             {type === 'vite' ? '⚡ Vite' : '▲ Next.js'} Preview
           </span>
           {previewUrl ? (
-            <code className="text-xs bg-gray-900 px-2 py-1 rounded text-blue-400">
+            <code className="text-xs bg-gray-900 px-2 py-1 rounded text-emerald-400">
               {previewUrl}
             </code>
           ) : (

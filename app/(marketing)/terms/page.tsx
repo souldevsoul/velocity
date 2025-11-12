@@ -113,7 +113,7 @@ export default function TermsPage() {
                 If you have any questions about these Terms of Service, please contact us at:
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Email: legal@nimbusdev.com
+                Email: support@velocitydev.com
               </p>
             </section>
           </div>

@@ -73,13 +73,13 @@ export default async function ProjectsPage() {
                 <Link
                   key={project.id}
                   href={`/dashboard/projects/${project.id}`}
-                  className="bg-white rounded-xl border border-gray-200 hover:border-violet-300 hover:shadow-md transition group"
+                  className="bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-md transition group"
                 >
                   <div className="p-6">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-violet-600 transition">
+                        <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-emerald-600 transition">
                           {project.name}
                         </h3>
                         <div className="flex items-center text-sm text-gray-500">
@@ -92,7 +92,7 @@ export default async function ProjectsPage() {
                           project.status === 'active'
                             ? 'bg-green-100 text-green-700'
                             : project.status === 'mvp_preview'
-                            ? 'bg-blue-100 text-blue-700'
+                            ? 'bg-emerald-100 text-emerald-700'
                             : 'bg-gray-100 text-gray-700'
                         }`}
                       >
@@ -114,7 +114,7 @@ export default async function ProjectsPage() {
 
                     {/* Active Tasks */}
                     {activeTasks > 0 && (
-                      <div className="flex items-center text-sm text-blue-600 bg-blue-50 rounded-lg px-3 py-2">
+                      <div className="flex items-center text-sm text-emerald-600 bg-emerald-50 rounded-lg px-3 py-2">
                         <Clock className="w-4 h-4 mr-2" />
                         {activeTasks} active {activeTasks === 1 ? 'task' : 'tasks'}
                       </div>
@@ -127,7 +127,7 @@ export default async function ProjectsPage() {
                           href={latestRun.prUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm text-violet-600 hover:text-violet-700 flex items-center"
+                          className="text-sm text-emerald-600 hover:text-emerald-700 flex items-center"
                           onClick={(e) => e.stopPropagation()}
                         >
                           View MVP PR →

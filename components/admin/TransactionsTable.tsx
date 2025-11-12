@@ -32,13 +32,13 @@ export function TransactionsTable({ transactions }: { transactions: TransactionW
       return 'bg-green-50'
     }
     if (reason.includes('refund')) {
-      return 'bg-blue-50'
+      return 'bg-emerald-50'
     }
     if (reason.includes('reserve')) {
-      return 'bg-orange-50'
+      return 'bg-emerald-50'
     }
     if (reason.includes('MVP')) {
-      return 'bg-violet-50'
+      return 'bg-emerald-50'
     }
     return 'bg-white'
   }
@@ -85,8 +85,8 @@ export function TransactionsTable({ transactions }: { transactions: TransactionW
                 >
                   <td className="py-4 px-6">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center">
-                        <UserIcon className="w-4 h-4 text-violet-600" />
+                      <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                        <UserIcon className="w-4 h-4 text-emerald-600" />
                       </div>
                       <div>
                         <p className="font-medium text-gray-900 text-sm">

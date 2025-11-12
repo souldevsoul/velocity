@@ -77,7 +77,7 @@ export default async function WalletPage() {
         {/* Wallet Overview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {/* Current Balance */}
-          <div className="bg-gradient-to-br from-violet-600 to-indigo-600 rounded-2xl p-6 text-white">
+          <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-6 text-white">
             <div className="flex items-center justify-between mb-4">
               <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                 <WalletIcon className="w-6 h-6" />

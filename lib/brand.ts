@@ -89,11 +89,11 @@ export const brand = {
 
   // Contact Information
   contact: {
-    email: 'hello@velocitydev.com',
+    email: 'support@velocitydev.com',
     support: 'support@velocitydev.com',
-    legal: 'legal@velocitydev.com',
-    privacy: 'privacy@velocitydev.com',
-    enterprise: 'enterprise@velocitydev.com',
+    legal: 'support@velocitydev.com',
+    privacy: 'support@velocitydev.com',
+    enterprise: 'support@velocitydev.com',
   },
 
   // Social Media (placeholders)

@@ -77,7 +77,7 @@ export function AssignTaskDialog({ taskId, estimatedCost }: { taskId: string; es
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="small" variant="outline">
+        <Button type="button" size="small" variant="outline">
           <UserPlus className="w-4 h-4 mr-2" />
           Assign
         </Button>
@@ -112,12 +112,12 @@ export function AssignTaskDialog({ taskId, estimatedCost }: { taskId: string; es
             </div>
           )}
 
-          <div className="p-4 bg-violet-50 border border-violet-200 rounded-lg space-y-2">
+          <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-lg space-y-2">
             <div className="flex justify-between items-center">
-              <span className="text-sm text-violet-900">Estimated Cost</span>
-              <span className="text-lg font-bold text-violet-700">{estimatedCost} credits</span>
+              <span className="text-sm text-emerald-900">Estimated Cost</span>
+              <span className="text-lg font-bold text-emerald-700">{estimatedCost} credits</span>
             </div>
-            <p className="text-xs text-violet-700">
+            <p className="text-xs text-emerald-700">
               Credits will be reserved when assigned and deducted when the PR is merged. If the PR is closed without merging, credits will be refunded.
             </p>
           </div>

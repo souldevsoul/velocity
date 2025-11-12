@@ -10,7 +10,7 @@ export const SourceIcon = ({ id }: { id: string }) => {
             alt={id}
             width={36}
             height={36}
-            className="h-10 w-10 aspect-square"
+            className="h-10 w-10"
             src={`/icons/${id}.svg`}
           />
         )}

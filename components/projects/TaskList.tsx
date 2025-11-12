@@ -23,9 +23,9 @@ export function TaskList({ tasks }: { tasks: TaskWithAssignee[] }) {
         return 'bg-green-100 text-green-700'
       case 'in_progress':
       case 'assigned':
-        return 'bg-blue-100 text-blue-700'
+        return 'bg-emerald-100 text-emerald-700'
       case 'awaiting_review':
-        return 'bg-yellow-100 text-yellow-700'
+        return 'bg-emerald-100 text-emerald-700'
       case 'canceled':
         return 'bg-gray-100 text-gray-700'
       default:
@@ -50,11 +50,11 @@ export function TaskList({ tasks }: { tasks: TaskWithAssignee[] }) {
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'feature':
-        return 'bg-violet-100 text-violet-700'
+        return 'bg-emerald-100 text-emerald-700'
       case 'bug':
         return 'bg-red-100 text-red-700'
       case 'content':
-        return 'bg-blue-100 text-blue-700'
+        return 'bg-emerald-100 text-emerald-700'
       default:
         return 'bg-gray-100 text-gray-700'
     }
@@ -110,7 +110,7 @@ export function TaskList({ tasks }: { tasks: TaskWithAssignee[] }) {
                   href={task.githubPrUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-violet-600 hover:text-violet-700"
+                  className="flex items-center text-emerald-600 hover:text-emerald-700"
                   onClick={(e) => e.stopPropagation()}
                 >
                   View PR

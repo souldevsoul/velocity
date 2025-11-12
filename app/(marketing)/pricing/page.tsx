@@ -86,6 +86,7 @@ export default function PricingPage() {
                     </div>
                     <Link href="/login">
                       <Button
+                        type="button"
                         variant={pkg.popular ? "primary" : "outline"}
                         fullWidth
                         className="mb-8"
@@ -265,6 +266,7 @@ export default function PricingPage() {
             </p>
             <Link href="/login">
               <Button
+                type="button"
                 variant="secondary"
                 size="large"
               >

@@ -134,7 +134,7 @@ export default function PrivacyPage() {
                 <li>Withdraw consent</li>
               </ul>
               <p className="text-gray-600 leading-relaxed mb-4">
-                To exercise these rights, please contact us at privacy@nimbusdev.com
+                To exercise these rights, please contact us at support@velocitydev.com
               </p>
             </section>
 
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Email: privacy@nimbusdev.com
+                Email: support@velocitydev.com
               </p>
             </section>
           </div>

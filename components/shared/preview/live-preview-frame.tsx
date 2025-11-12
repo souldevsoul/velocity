@@ -326,6 +326,7 @@ export default function LivePreviewFrame({
       <img
         ref={imgRef}
         id="live-frame"
+        alt="Live preview frame"
         onLoad={() => {
           setImageLoaded(true);
           if (onScrapeComplete) onScrapeComplete();

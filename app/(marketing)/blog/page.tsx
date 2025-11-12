@@ -46,12 +46,12 @@ export default function BlogPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/how-it-works">
-                  <Button variant="primary" size="large">
+                  <Button type="button" variant="primary" size="large">
                     How It Works
                   </Button>
                 </Link>
                 <Link href="/pricing">
-                  <Button variant="outline" size="large">
+                  <Button type="button" variant="outline" size="large">
                     View Pricing
                   </Button>
                 </Link>
@@ -97,7 +97,7 @@ export default function BlogPage() {
       {/* Newsletter */}
       <section className="bg-white py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-12 md:p-16 text-center">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-emerald-600 to-green-700 rounded-3xl p-12 md:p-16 text-center">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
               Stay updated
             </h2>
@@ -107,11 +107,11 @@ export default function BlogPage() {
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="your@email.com"
+                placeholder="support@velocitydev.com"
                 className="flex-1 px-6 py-3 rounded-lg outline-none"
                 disabled
               />
-              <Button variant="secondary" size="large" disabled>
+              <Button type="button" variant="secondary" size="large" disabled>
                 Coming Soon
               </Button>
             </div>

@@ -27,7 +27,7 @@ export default function ContactPage() {
             <p className="text-xl text-gray-700 mb-4 max-w-2xl mx-auto">
               Have questions? We'd love to hear from you.
             </p>
-            <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 max-w-2xl mx-auto mb-12">
+            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 max-w-2xl mx-auto mb-12">
               <p className="text-gray-900 font-semibold">
                 Form submissions are currently in development.
               </p>
@@ -65,8 +65,8 @@ export default function ContactPage() {
               {
                 icon: Building2,
                 title: 'Enterprise',
-                description: 'enterprise@velocitydev.com',
-                action: 'mailto:enterprise@velocitydev.com'
+                description: 'support@velocitydev.com',
+                action: 'mailto:support@velocitydev.com'
               }
             ].map((option, index) => (
               <a
@@ -74,7 +74,7 @@ export default function ContactPage() {
                 href={option.action}
                 className="bg-white/40 backdrop-blur-md rounded-3xl border border-white/30 p-8 shadow-lg hover:shadow-xl transition-shadow text-center group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <option.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -102,7 +102,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-600 focus:border-transparent outline-none transition"
                       placeholder="Your name"
                       disabled
                     />
@@ -114,8 +114,8 @@ export default function ContactPage() {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
-                      placeholder="your@email.com"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-600 focus:border-transparent outline-none transition"
+                      placeholder="support@velocitydev.com"
                       disabled
                     />
                   </div>
@@ -139,13 +139,14 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     rows={6}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-600 focus:border-transparent outline-none transition resize-none"
                     placeholder="Tell us more about your inquiry..."
                     disabled
                   ></textarea>
                 </div>
                 <div className="text-center">
                   <Button
+                    type="submit"
                     variant="primary"
                     size="large"
                     className="w-full md:w-auto"
@@ -173,10 +174,10 @@ export default function ContactPage() {
             Check out our FAQ section or documentation for instant answers to common questions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="large">
+            <Button type="button" variant="outline" size="large">
               View FAQ
             </Button>
-            <Button variant="outline" size="large">
+            <Button type="button" variant="outline" size="large">
               Read Docs
             </Button>
           </div>

@@ -96,7 +96,7 @@ export function CreateTaskDialog({ projectId }: { projectId: string }) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button>
+        <Button type="button">
           <Plus className="w-4 h-4 mr-2" />
           New Task
         </Button>
@@ -178,11 +178,11 @@ export function CreateTaskDialog({ projectId }: { projectId: string }) {
               </div>
             )}
 
-            <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
-              <p className="text-sm text-blue-900">
+            <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-lg">
+              <p className="text-sm text-emerald-900">
                 <span className="font-medium">Estimated cost:</span> {calculateCost()} credits
               </p>
-              <p className="text-xs text-blue-700 mt-1">
+              <p className="text-xs text-emerald-700 mt-1">
                 Credits are only charged when you assign the task to an executor
               </p>
             </div>

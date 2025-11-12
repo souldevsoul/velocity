@@ -285,7 +285,6 @@ function AISandboxPage() {
     return () => {
       isMounted = false;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Run only on mount
   
   useEffect(() => {
@@ -313,7 +312,7 @@ function AISandboxPage() {
       }
       captureUrlScreenshot(screenshotUrl);
     }
-  }, [showHomeScreen, homeUrlInput]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [showHomeScreen, homeUrlInput]);
 
   // Auto-start generation if flagged
   useEffect(() => {
@@ -326,7 +325,7 @@ function AISandboxPage() {
         startGeneration();
       }, 1000);
     }
-  }, [showHomeScreen, homeUrlInput]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [showHomeScreen, homeUrlInput]);
 
 
   useEffect(() => {
@@ -334,7 +333,7 @@ function AISandboxPage() {
     if (!sandboxData) {
       checkSandboxStatus();
     }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (chatMessagesRef.current) {
@@ -356,7 +355,6 @@ function AISandboxPage() {
       
       return () => clearTimeout(timer);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shouldAutoGenerate, homeUrlInput, showHomeScreen]);
 
   const updateStatus = (text: string, active: boolean) => {
@@ -1151,9 +1149,9 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                     <FiChevronRight style={{ width: '16px', height: '16px' }} className="text-gray-600" />
                   )}
                   {expandedFolders.has('app') ? (
-                    <BsFolder2Open style={{ width: '16px', height: '16px' }} className="text-blue-500" />
+                    <BsFolder2Open style={{ width: '16px', height: '16px' }} className="text-emerald-500" />
                   ) : (
-                    <BsFolderFill style={{ width: '16px', height: '16px' }} className="text-blue-500" />
+                    <BsFolderFill style={{ width: '16px', height: '16px' }} className="text-emerald-500" />
                   )}
                   <span className="font-medium text-gray-800">app</span>
                 </div>
@@ -1197,9 +1195,9 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                                 <FiChevronRight style={{ width: '16px', height: '16px' }} className="text-gray-600" />
                               )}
                               {expandedFolders.has(dir) ? (
-                                <BsFolder2Open style={{ width: '16px', height: '16px' }} className="text-yellow-600" />
+                                <BsFolder2Open style={{ width: '16px', height: '16px' }} className="text-emerald-600" />
                               ) : (
-                                <BsFolderFill style={{ width: '16px', height: '16px' }} className="text-yellow-600" />
+                                <BsFolderFill style={{ width: '16px', height: '16px' }} className="text-emerald-600" />
                               )}
                               <span className="text-gray-700">{dir.split('/').pop()}</span>
                             </div>
@@ -1250,23 +1248,23 @@ Tip: I automatically detect and install npm packages from your code imports (lik
             {generationProgress.isGenerating && (generationProgress.isThinking || generationProgress.thinkingText) && (
               <div className="px-6 pb-6">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="text-sky-600 font-medium flex items-center gap-2">
+                  <div className="text-teal-600 font-medium flex items-center gap-2">
                     {generationProgress.isThinking ? (
                       <>
-                        <div className="w-3 h-3 bg-sky-600 rounded-full animate-pulse" />
+                        <div className="w-3 h-3 bg-teal-600 rounded-full animate-pulse" />
                         AI is thinking...
                       </>
                     ) : (
                       <>
-                        <span className="text-sky-600">✓</span>
+                        <span className="text-teal-600">✓</span>
                         Thought for {generationProgress.thinkingDuration || 0} seconds
                       </>
                     )}
                   </div>
                 </div>
                 {generationProgress.thinkingText && (
-                  <div className="bg-blue-950 border border-sky-700 rounded-lg p-4 max-h-48 overflow-y-auto scrollbar-hide">
-                    <pre className="text-xs font-mono text-sky-300 whitespace-pre-wrap">
+                  <div className="bg-green-950 border border-teal-700 rounded-lg p-4 max-h-48 overflow-y-auto scrollbar-hide">
+                    <pre className="text-xs font-mono text-teal-300 whitespace-pre-wrap">
                       {generationProgress.thinkingText}
                     </pre>
                   </div>
@@ -1360,7 +1358,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                         >
                           {generationProgress.streamedCode || 'Starting code generation...'}
                         </SyntaxHighlighter>
-                        <span className="inline-block w-3 h-5 bg-orange-400 ml-1 animate-pulse" />
+                        <span className="inline-block w-3 h-5 bg-green-400 ml-1 animate-pulse" />
                       </div>
                     </div>
                   )
@@ -1402,7 +1400,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                           >
                             {generationProgress.currentFile.content}
                           </SyntaxHighlighter>
-                          <span className="inline-block w-3 h-4 bg-orange-400 ml-4 mb-4 animate-pulse" />
+                          <span className="inline-block w-3 h-4 bg-green-400 ml-4 mb-4 animate-pulse" />
                         </div>
                       </div>
                     )}
@@ -1519,7 +1517,6 @@ Tip: I automatically detect and install npm packages from your code imports (lik
           <div className="relative w-full h-full bg-gray-900">
             {/* Screenshot as background when available */}
             {urlScreenshot && (
-              /* eslint-disable-next-line @next/next/no-img-element */
               <img 
                 src={urlScreenshot} 
                 alt="Website preview" 
@@ -2220,13 +2217,13 @@ Tip: I automatically detect and install npm packages from your code imports (lik
 
   const getFileIcon = (fileName: string) => {
     const ext = fileName.split('.').pop()?.toLowerCase();
-    
+
     if (ext === 'jsx' || ext === 'js') {
-      return <SiJavascript style={{ width: '16px', height: '16px' }} className="text-yellow-500" />;
+      return <SiJavascript style={{ width: '16px', height: '16px' }} className="text-emerald-500" />;
     } else if (ext === 'tsx' || ext === 'ts') {
-      return <SiReact style={{ width: '16px', height: '16px' }} className="text-blue-500" />;
+      return <SiReact style={{ width: '16px', height: '16px' }} className="text-emerald-500" />;
     } else if (ext === 'css') {
-      return <SiCss3 style={{ width: '16px', height: '16px' }} className="text-blue-500" />;
+      return <SiCss3 style={{ width: '16px', height: '16px' }} className="text-emerald-500" />;
     } else if (ext === 'json') {
       return <SiJson style={{ width: '16px', height: '16px' }} className="text-gray-600" />;
     } else {
@@ -3175,7 +3172,6 @@ Focus on the key sections and content, making it clean and modern.`;
                     <div key={idx} className="flex flex-col gap-3">
                       {/* Site info with favicon */}
                       <div className="flex items-center gap-4 text-sm">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img 
                           src={favicon} 
                           alt={siteName}
@@ -3206,7 +3202,6 @@ Focus on the key sections and content, making it clean and modern.`;
                             maxHeight: sidebarScrolled ? '0' : '200px'
                           }}
                         >
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img 
                             src={screenshot}
                             alt={`${siteName} preview`}
@@ -3418,7 +3413,7 @@ Focus on the key sections and content, making it clean and modern.`;
                           return startIndex !== -1 ? lastContent.slice(startIndex) : lastContent;
                         })()}
                       </SyntaxHighlighter>
-                      <span className="inline-block w-3 h-4 bg-orange-400 ml-3 mb-3 animate-pulse" />
+                      <span className="inline-block w-3 h-4 bg-green-400 ml-3 mb-3 animate-pulse" />
                     </div>
                   </motion.div>
                 )}

@@ -51,7 +51,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-emerald-600 to-teal-500 rounded-3xl"></div>
+              <div className="w-full h-96 bg-gradient-to-br from-emerald-600 to-teal-500 rounded-3xl"></div>
             </div>
           </div>
         </div>
@@ -135,6 +135,7 @@ export default function AboutPage() {
             </p>
             <Link href="/login">
               <Button
+                type="button"
                 variant="secondary"
                 size="large"
               >
