@@ -74,7 +74,7 @@ const config: Config = {
           800: '#19251D',
           900: '#041109',
         },
-        yellowGreen: {
+        emerald: {
           50: '#FDFEFB',
           100: '#F7FCED',
           200: '#EFFADB',

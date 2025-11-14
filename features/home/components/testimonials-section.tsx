@@ -44,7 +44,7 @@ const TestimonialsSection: React.FC = () => {
                   <Image
                     className="block h-8 mb-8"
                     src={testimonial.logoSrc}
-                    alt="Company logo"
+                    alt="Company"
                     width={120}
                     height={32}
                   />

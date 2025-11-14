@@ -1,10 +1,13 @@
 import { Application, Assets, Sprite, Texture } from "pixi.js";
 
 export const isDestroyed = (app: Application) => {
-  if (!app.ticker || !app.renderer || !app.stage || !(app.renderer as any).gl)
+  if (!app.ticker || !app.renderer || !app.stage)
     return true;
 
-  return (app.renderer as any).gl.isContextLost();
+  const gl = (app.renderer as any).gl;
+  if (!gl) return true;
+
+  return gl.isContextLost();
 };
 
 export const generateTexture = (app: Application, graphic: any) => {
